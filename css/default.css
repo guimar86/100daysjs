@@ -1,32 +1,38 @@
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    font-family: 'Poppins', sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+}
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.container {
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  height: -100vh;
+  text-align: center;
+  border: 1px dashed #000;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
 
-  .container{
-
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-content: center;
-    height: -100vh;
-    text-align: center;
-    border:1px dashed #000;
-    border-radius: 1rem;
-    padding: 1.5rem;
-  }
-
-  .description-side{
-
-    width: 20%;
-    padding: 1rem;
-    vertical-align: top;
-    height: -100vh;
-    text-align: left;
-    line-height: 1.9;
-  }
+.description-side {
+  width: 20%;
+  padding: 1rem;
+  vertical-align: top;
+  height: -100vh;
+  text-align: left;
+  line-height: 1.9;
+}
