@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .container{
+
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    height: -100vh;
+    text-align: center;
+    border:1px dashed #000;
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+
+  .description-side{
+
+    width: 20%;
+    padding: 1rem;
+    vertical-align: top;
+    height: -100vh;
+    text-align: left;
+    line-height: 1.9;
+  }

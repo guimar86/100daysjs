@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+  </head>
+  <body>
+    <div class="description-side">
+      <h1>Guess my number</h1>
+
+      <p>This a guessing number game.</p>
+
+      <p>
+        In this game you will guess the number that will be provided between 1
+        and 10; If your given value is higher a message will show saying "too
+        high", if is lower, a message will show saying "too low" and if it's
+        equal then you have won the game and a message will show saying "You
+        won". "Enjoy the game!" >
+      </p>
+      <a href="index.html">Back to menu</a>
+    </div>
+    <div class="container">
+      <h1>Guess my number!</h1>
+      <button id="startBtn">Start</button>
+      <span></span>
+      <input type="text" id="userGuessNumber" required />
+      <button id="checkNumberBtn">Check</button>
+      <p id="message"></p>
+    </div>
+
+    <!--script-->
+    <script src="./js/guessgame.js"></script>
+  </body>
+</html>
