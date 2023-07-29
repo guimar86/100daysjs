@@ -28,6 +28,21 @@ button {
   padding: 1.5rem;
 }
 
+.dark-menu{
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.win-menu{
+  background-color: #0F0;
+  color: #000;
+}
+
+.lose-menu{
+  background-color: red;
+  color: #FFF;
+}
+
 .description-side {
   width: 20%;
   padding: 1rem;
