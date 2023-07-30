@@ -11,6 +11,8 @@ body {
   
   .menu {
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
   
   .menu ul {
