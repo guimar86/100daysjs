@@ -1,125 +1,50 @@
-body {
+
+body{
+
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-color);
 }
-
 .gallery {
-  display: inline-grid;
-  grid-template-columns: repeat(5, 4fr);
-}
-
-:root {
-  --font-color: #0f0f0f;
-  --bg-color: #fefefe;
-}
-
-.game-card {
-  width: 200px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.game-card:hover {
-  background-color: black;
-  color: #fff;
-  cursor: pointer;
-}
-
-.game-card img {
-  width: 100%;
-  height: 120px; /* Set a fixed height for all images */
-  object-fit: cover; /* Preserve aspect ratio while filling the container */
-  max-height: 180px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.game-card h3 {
-  font-size: 16px;
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-.game-card p {
-  font-size: 14px;
-  margin: 0;
-}
-
-.switch {
-  height: 100px;
-  position: fixed;
-  right: 50px;
-  top: 50px;
-  display: none; /*until js is sorted for it*/
-}
-
-.theme-switch {
-  display: inline-block;
-  height: 34px;
-  position: relative;
-  width: 60px;
-}
-
-.theme-switch input {
-  display: none;
-}
-
-.slider {
-  background-color: #ccc;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: 0.4s;
-}
-
-.slider:before {
-  background-color: #fff;
-  bottom: 4px;
-  content: '';
-  height: 26px;
-  left: 4px;
-  position: absolute;
-  transition: 0.4s;
-  width: 26px;
-}
-
-input:checked + .slider {
-  background-color: #2b2b2b;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-
-@media(prefers-color-scheme:light){
-
-  body{
-    background-color: #fefefe;
-    color: #121212;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
-}
-@media(prefers-color-scheme:dark){
-
-  body{
-    background-color: "#121212";
-    color: "#fefefe";
+  
+  .game-card {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
-}
+
+  .game-card:hover{
+
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .game-card img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .game-card h3 {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  
+  .game-card p {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  

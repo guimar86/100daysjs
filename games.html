@@ -10,89 +10,22 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" type="text/css" href="./css/default.css" />
     <link rel="stylesheet" type="text/css" href="./css/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="./css/modal.css" />
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
   </head>
   <body>
     <header>
-      <h1>Your local game store</h1>
-      <a href="index.html" style="text-align: center">Back to menu</a>
-
-      <div class="searchPanel">
-        <label>Platform</label>
-        <select id="platformSelect" class="custom-select">
-          <option value="0">--Select an item</option>
-        </select>
-      </div>
-
-      <div class="switch">
-        <label class="theme-switch" for="checkbox">
-          <input type="checkbox" id="checkbox" />
-          <div class="slider round"></div>
-        </label>
-      </div>
+      <h1>My video game library</h1>
     </header>
     <section>
-      <div class="gallery" id="gallery"></div>
+      <div class="gallery animate__animated animate__fadeInDown" id="gallery"></div>
     </section>
-    <div class="modal hidden">
-      <button class="close-modal">&times;</button>
-      <h1 id="game-title">
-        Etenim semper illud extra est, quod arte comprehenditur.
-      </h1>
 
-      <div class="modal-content">
-        <section class="game-img-section"></section>
-        <section>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            <i>At hoc in eo M.</i> Parvi enim primo ortu sic iacent, tamquam
-            omnino sine animo sint. Summum ením bonum exposuit vacuitatem
-            doloris; Duo Reges: constructio interrete.
-            <b>Tum Triarius: Posthac quidem, inquit, audacius.</b>
-            <mark>Primum quid tu dicis breve?</mark> Ita fit beatae vitae domina
-            fortuna, quam Epicurus ait exiguam intervenire sapienti. Nos autem
-            non solum beatae vitae istam esse oblectationem videmus, sed etiam
-            levamentum miseriarum. Cum audissem Antiochum, Brute, ut solebam,
-            cum M. Diodorus, eius auditor, adiungit ad honestatem vacuitatem
-            doloris. Tum ille timide vel potius verecunde: Facio, inquit.
-            Quicquid porro animo cernimus, id omne oritur a sensibus;
-          </p>
-        </section>
-
-        
-        </div>
-        <div class="modal-footer">
-            <label for="quantity">Quantity:</label>
-            <input class="custom-text-input"
-              type="number"
-              id="quantity"
-              name="quantity"
-              min="1"
-              value="1"
-            />
-  
-            <a href="#"><i class="fa fa-solid fa-cart-plus"></i></a>
-      </div>
-    </div>
-    <div class="overlay hidden"></div>
-    <!--javascript-->
-    <script
-      src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
-      integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE="
-      crossorigin="anonymous"
-    ></script>
     <script src="./js/games.js"></script>
   </body>
 </html>

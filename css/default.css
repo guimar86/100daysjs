@@ -8,7 +8,6 @@ body {
   font-family: 'Poppins', sans-serif;
   padding: 1rem;
 }
-/*
 button {
   display: inline-block;
   padding: 10px 20px;
@@ -18,7 +17,6 @@ button {
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
-*/
 .container {
   flex-flow: column nowrap;
   justify-content: center;
@@ -56,115 +54,4 @@ button {
 
 #colorTxt{
   margin: 10px 10px;
-}
-
-/* Custom Select Styles */
-.custom-select {
-  display: inline-block;
-  position: relative;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  cursor: pointer;
-}
-
-.custom-select select {
-  display: none; /* Hide the default select element */
-}
-
-/* Custom Radio Button Styles */
-.custom-radio {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.custom-radio input[type="radio"] {
-  display: none; /* Hide the default radio input */
-}
-
-.custom-radio-label {
-  display: inline-block;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.custom-radio input[type="radio"]:checked + .custom-radio-label {
-  background-color: #333; /* Change color when radio is checked */
-  color: #f0f0f0;
-}
-
-/* Custom Checkbox Styles */
-.custom-checkbox {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.custom-checkbox input[type="checkbox"] {
-  display: none; /* Hide the default checkbox input */
-}
-
-.custom-checkbox-label {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
-}
-
-.custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-label {
-  background-color: #333; /* Change color when checkbox is checked */
-  color: #f0f0f0;
-}
-
-/* Custom Text Input Styles */
-.custom-text-input {
-  display: inline-block;
-  position: relative;
-}
-
-.custom-text-input input[type="text"],
-.custom-text-input textarea {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  transition: border-color 0.3s ease;
-}
-
-.custom-text-input input[type="text"]:focus,
-.custom-text-input textarea:focus {
-  outline: none;
-  border-color: #333; /* Change border color on focus */
-}
-
-/* Custom Textarea Styles */
-.custom-textarea {
-  display: inline-block;
-  position: relative;
-}
-
-.custom-textarea textarea {
-  display: block;
-  width: 100%;
-  height: 150px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  transition: border-color 0.3s ease;
-}
-
-.custom-textarea textarea:focus {
-  outline: none;
-  border-color: #333; /* Change border color on focus */
 }
