@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./css/default.css" />
+    <link rel="stylesheet" type="text/css" href="./css/modal.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="flex-container">
+      <h1>Modal Popup</h1>
+      <div class="modal hidden">
+        <div class="modal-header">
+            <h3>Title</h3>
+            <h2 id="modalCloseBtn">&times;</h2>
+        </div>    
+            
+          
+        <div class="modal-content">
+
+            
+          <h1>
+            Bona autem corporis huic sunt, quod posterius posui, similiora.
+          </h1>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Alterum
+            significari idem, ut si diceretur, officia media omnia aut pleraque
+            servantem vivere. Haec et tu ita posuisti, et verba vestra sunt.
+            <a href="http://loripsum.net/" target="_blank"
+              >Omnis enim est natura diligens sui.</a
+            >
+            At quicum ioca seria, ut dicitur, quicum arcana, quicum occulta
+            omnia? Quo modo autem optimum, si bonum praeterea nullum est? Atque
+            haec coniunctio confusioque virtutum tamen a philosophis ratione
+            quadam distinguitur. Duo Reges: constructio interrete.
+            <i>Proclivi currit oratio.</i>
+          </p>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+      <button class="button" id="openModal">Show Modal</button><br/>
+      <a href="index.html">Back to menu</a>
+    </div>
+    <script src="./js/modalPop.js"></script>
+  </body>
+</html>
