@@ -3,16 +3,19 @@
 let gamesList = [];
 let galleryItemsPath = "../resources/games.json";
 let platformFilterList = [];
-let genreFilterList=[];
+let genreFilterList = [];
 let platformSearch = document.querySelector("#platformSearch");
 let genreSearch = document.querySelector("#genreSearch");
+const galleryDiv = document.getElementById("gallery");
 
 //load gallery
 readJSONFile(galleryItemsPath)
   .then((jsonData) => {
     if (jsonData) {
-      //check if filter is filled
-      jsonData.games.forEach((game) => createGameCard(game));
+      gamesList = jsonData.games;
+      platformFilterList = fillPlatformFilterList(gamesList);
+      genreFilterList = fillGenreSearchList(gamesList);
+      updateGallery();
     }
   })
   .catch((error) => {
@@ -28,10 +31,7 @@ async function readJSONFile(url) {
       throw new Error("Network response was not ok");
     }
 
-    gamesList = await response.json();
-    platformFilterList = fillPlatformFilterList(gamesList);
-    genreFilterList=fillGenreSearchList(gamesList);
-    return gamesList;
+    return await response.json();
   } catch (error) {
     console.error("Error fetching JSON data:", error);
     return null;
@@ -39,8 +39,7 @@ async function readJSONFile(url) {
 }
 
 const fillPlatformFilterList = function (gameList) {
-  console.log(gamesList);
-  platformFilterList = gamesList.games.map((property) => property.platform);
+  platformFilterList = gameList.map((property) => property.platform);
   platformFilterList = [...new Set(platformFilterList)];
   platformFilterList.forEach((f) => {
     const option = document.createElement("option");
@@ -51,10 +50,8 @@ const fillPlatformFilterList = function (gameList) {
   return platformFilterList;
 };
 
-
 const fillGenreSearchList = function (gameList) {
-  console.log(gamesList);
-  genreFilterList = gamesList.games.map((property) => property.genre);
+  genreFilterList = gameList.map((property) => property.genre);
   genreFilterList = [...new Set(genreFilterList)];
   genreFilterList.forEach((f) => {
     const option = document.createElement("option");
@@ -62,15 +59,11 @@ const fillGenreSearchList = function (gameList) {
     option.text = f;
     genreSearch.appendChild(option);
   });
-  return platformFilterList;
+  return genreFilterList;
 };
-
-
 
 // Function to create and display a game card in the gallery
 function createGameCard(game) {
-  const galleryDiv = document.getElementById("gallery");
-
   const gameCard = document.createElement("div");
   gameCard.classList.add("game-card");
 
@@ -100,3 +93,20 @@ function createGameCard(game) {
 
   galleryDiv.appendChild(gameCard);
 }
+
+function updateGallery() {
+  galleryDiv.innerHTML = "";
+  const platformFilterValue = platformSearch.value;
+  const genreFilterValue = genreSearch.value;
+
+  const filteredGames = gamesList.filter(
+    (game) =>
+      (platformFilterValue === "0" || game.platform === platformFilterValue) &&
+      (genreFilterValue === "0" || game.genre === genreFilterValue)
+  );
+
+  filteredGames.forEach((game) => createGameCard(game));
+}
+
+platformSearch.addEventListener("change", updateGallery);
+genreSearch.addEventListener("change", updateGallery);

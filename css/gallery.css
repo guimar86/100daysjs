@@ -64,7 +64,7 @@ body{
   @media(min-width:60em){
 
     .gallery {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
     }
 
   }
