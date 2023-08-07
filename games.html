@@ -18,10 +18,26 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
   </head>
-  <body>
+  <body class="flex-container">
     <header>
       <h1>My video game library</h1>
     </header>
+    <section>
+      <div id="searchPanel">
+        <div>
+          <label>Platform:</label>
+          <select id="platformSearch">
+            <option value="0">--Search by Platform--</option>
+          </select>
+        </div>
+        <div>
+          <label>Genre:</label>
+          <select id="genreSearch">
+            <option value="0">--Search by Genre--</option>
+          </select>
+        </div>
+      </div>
+    </section>
     <section>
       <div class="gallery animate__animated animate__fadeInDown" id="gallery"></div>
     </section>

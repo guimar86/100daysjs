@@ -6,6 +6,9 @@ let closeModalBtn=document.querySelector("#modalCloseBtn");
 let openModalBtn=document.querySelector("#openModal");
 
 
+/**
+ * The openModal function removes the "hidden" class from the modal and overlay elements.
+ */
 const openModal=function(){
 
     modal.classList.remove("hidden");
@@ -13,6 +16,9 @@ const openModal=function(){
 
 };
 
+/**
+ * The closeModal function adds the "hidden" class to both the modal and overlay elements.
+ */
 const closeModal=function(){
     modal.classList.add("hidden");
     overlay.classList.add("hidden");

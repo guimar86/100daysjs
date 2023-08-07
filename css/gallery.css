@@ -5,9 +5,8 @@ body{
   flex-direction: column;
 }
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    gap: 1rem;
   }
   
   .game-card {
@@ -47,4 +46,25 @@ body{
     margin: 0;
   }
   
+
+  #searchPanel{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:1rem;
+  }
   
+  @media(min-width:40em){
+
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  @media(min-width:60em){
+
+    .gallery {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+  }

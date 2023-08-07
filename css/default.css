@@ -1,12 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #f0f0f0;
   font-family: 'Poppins', sans-serif;
   padding: 1rem;
+}
+
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 button {
   display: inline-block;
